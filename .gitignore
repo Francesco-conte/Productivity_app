@@ -4,3 +4,6 @@ __pycache__/
 
 # Task data file (user-specific, not committed)
 tasks.json
+
+# SQLite database
+studywizz.db

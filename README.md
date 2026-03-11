@@ -1,50 +1,57 @@
-# 📋 Daily Task Manager
+# 📚 StudyWizz — Productivity App
 
-A simple, interactive command-line application for managing your daily tasks — built entirely with Python's standard library.
+A sleek, dark-mode **GUI productivity app** built with Python and CustomTkinter.
+Manage tasks with deadlines and priorities, view them on an interactive calendar, and stay on top of your schedule.
+
+> The original CLI task manager (`task_manager.py`) is still available for terminal use.
 
 ## Features
 
-- ➕ **Add tasks** with a title, optional description, priority (low / medium / high), and optional due date
-- 📋 **View all tasks** sorted by due date or priority
-- 📅 **View today's tasks** — see what's due today and any overdue items
-- ✅ **Mark tasks as completed**
-- ✏️ **Edit tasks** — update any field at any time
-- 🗑️ **Delete tasks**
-- 🔍 **Filter tasks** by status (pending / completed) and/or priority
-- 📊 **Daily summary** — overview of pending, completed, and overdue tasks
+- 📋 **Tasks with deadlines** — ordered by due date, with overdue warnings (⚠)
+- ⭐ **Tasks without deadlines** — priority-based tasks with star ratings
+- 📅 **Interactive calendar** — month view with task count badges; click any day
+- 📊 **Done / Stats views** — review completed tasks and productivity statistics
+- 🔄 **Google Calendar sync button** — ready for OAuth integration
+- 💾 **SQLite database** — persistent storage via `studywizz.db`
+- 🌙 **Dark mode** — minimalistic design with a dark colour scheme
 
 ## Requirements
 
-- Python 3.7+
-- No external dependencies (uses only the standard library: `json`, `datetime`, `os`, `uuid`, `sys`)
+- Python 3.8+
+- `customtkinter` (installed via `pip install -r requirements.txt`)
 
 ## Getting Started
 
-Clone or download this repository, then run:
-
 ```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the GUI app
+python studywizz.py
+
+# Or run the original CLI task manager
 python task_manager.py
 ```
-
-That's it — no installation or virtual environment needed.
 
 ## File Structure
 
 ```
 Productivity_app/
 ├── README.md           # This file
-├── task_manager.py     # Main entry point — run this!
-├── requirements.txt    # No external dependencies
+├── studywizz.py        # GUI app — run this!
+├── task_manager.py     # Original CLI task manager
+├── requirements.txt    # Python dependencies
 └── tasks/
     ├── __init__.py
     ├── models.py       # Task data model
-    ├── storage.py      # JSON file persistence (tasks.json)
+    ├── database.py     # SQLite database persistence (studywizz.db)
+    ├── storage.py      # JSON file persistence (tasks.json, for CLI)
     └── utils.py        # Formatting, date parsing, sorting/filtering helpers
 ```
 
-Tasks are stored locally in a `tasks.json` file (created automatically on first run).
+Tasks are stored in a local `studywizz.db` SQLite database (created automatically on first run).
 
-## Menu Options
+## CLI Menu Options (task_manager.py)
 
 ```
 =================================
