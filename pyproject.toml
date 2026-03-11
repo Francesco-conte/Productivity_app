@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=78.1.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "studywizz"
+version = "1.0.0"
+description = "A sleek, dark-mode GUI productivity app built with Python and CustomTkinter."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+
+dependencies = [
+    "customtkinter>=5.2.2",
+]
+
+[project.scripts]
+studywizz = "studywizz:main"

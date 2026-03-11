@@ -22,12 +22,27 @@ Manage tasks with deadlines and priorities, view them on an interactive calendar
 
 ## Getting Started
 
+### Quick start (recommended)
+
 ```bash
-# Install dependencies
+# 1. Install the project (also installs dependencies)
+pip install -e .
+
+# 2. Launch the GUI
+studywizz
+```
+
+### Alternative ways to run
+
+```bash
+# Install dependencies only
 pip install -r requirements.txt
 
-# Run the GUI app
+# Run the GUI directly
 python studywizz.py
+
+# Or run from the project directory
+python .
 
 # Or run the original CLI task manager
 python task_manager.py
@@ -38,6 +53,8 @@ python task_manager.py
 ```
 Productivity_app/
 ├── README.md           # This file
+├── pyproject.toml      # Project metadata & install config
+├── __main__.py         # Allows `python .` to launch the GUI
 ├── studywizz.py        # GUI app — run this!
 ├── task_manager.py     # Original CLI task manager
 ├── requirements.txt    # Python dependencies
