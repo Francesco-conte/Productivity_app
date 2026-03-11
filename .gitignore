@@ -7,3 +7,8 @@ tasks.json
 
 # SQLite database
 studywizz.db
+
+# Build / install artifacts
+*.egg-info/
+dist/
+build/
