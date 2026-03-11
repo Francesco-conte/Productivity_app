@@ -240,23 +240,6 @@ def daily_summary(tasks):
 # Main menu
 # ---------------------------------------------------------------------------
 
-MENU = """
-{divider}
-  {title}
-{divider}
-  1. Add a new task
-  2. View all tasks
-  3. View today's tasks
-  4. Mark task as completed
-  5. Edit a task
-  6. Delete a task
-  7. Filter tasks
-  8. Daily summary
-  9. Exit
-{divider}
-""".strip()
-
-
 def show_menu():
     width = 33
     print()
